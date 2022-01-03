@@ -4,7 +4,7 @@ $startTime = Get-date
 #Settings
 
 try {
-    $config = Import-PowerShellDataFile -Path ".\sandboxconfig.psd1"
+    $config = Import-PowerShellDataFile -Path "c:\sandboxsource\sandboxconfig.psd1"
 }
 catch {
     Throw "Error loading sandboxconfig.psd1. Ensure it exists in the same directory as this script."

@@ -1,7 +1,7 @@
 $InformationPreference = "Continue"
 #Settings
 try {
-    $config = Import-PowerShellDataFile -Path "$PSScriptRoot\sandboxconfig.psd1"
+    $config = Import-PowerShellDataFile -Path "c:\sandboxsource\sandboxconfig.psd1"
 }
 catch {
     write-error "Error loading sandboxconfig.psd1" -erroraction stop
