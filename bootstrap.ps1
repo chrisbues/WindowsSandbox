@@ -153,7 +153,7 @@ Write-Information "Configuring PS 5 Profile"
 try {
     $profileText = '$env:psmodulepath += ";' + "$($config.SandboxSource)\ModuleSource" + '"'
     Set-Content -Value $profileText -Path $profile -Force
-    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 }
 catch {
     Write-Error "Error Configuring PS 5 Profile" -errorAction Stop
