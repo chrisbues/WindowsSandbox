@@ -17,12 +17,6 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VisualStudioCode"
-				},
-				{
-					"PackageIdentifier" : "Keeper.KeeperDesktop"
-				},
-				{
-					"PackageIdentifier" : "Emurasoft.EmEditor"
 				}
 			],
 			"SourceDetails" : 

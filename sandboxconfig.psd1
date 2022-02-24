@@ -2,13 +2,11 @@
     # Paths for the two shared folders. Source is R/O, Shared is R/W.
     SandboxSource = "c:\SandboxSource";
     SandboxShared = "C:\SandboxShared";
-    
-    
     # Modules Config
 
     # Use cache directoryf or modules. Run cachesource.ps1 to populate the cache.
     useCache = $false;
-    
+
     # PS modules. Name, PS5 and PS6+
     psmodules = @(
     @{ name = 'Microsoft.Graph'; desktop = $true; core = $true },
@@ -41,6 +39,7 @@
         @{ name = 'PIM'; url = 'https://portal.azure.com/#blade/Microsoft_Azure_PIMCommon/CommonMenuBlade/quickStart' },
         @{ name = 'Admin'; url = 'https://admin.microsoft.com/' },
         @{ name = 'Portal'; url = 'https://portal.azure.com/' },
+        @{ name = 'Preview Portal'; url = 'https://preview.portal.azure.com/' },
         @{ name = 'AAD'; url = 'https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview' },
         @{ name = 'Sentinel'; url = 'https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/microsoft.securityinsightsarg%2Fsentinel' },
         @{ name = 'Security'; url = 'https://security.microsoft.com/' },

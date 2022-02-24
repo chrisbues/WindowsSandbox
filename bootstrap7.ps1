@@ -21,7 +21,6 @@ try {
     $profileText = '$env:psmodulepath += ";' + "$($config.SandboxSource)\ModuleSource" + '"'
     Set-Content -Value $profileText -Path $profile -force
     Set-PSReadLineOption -PredictionSource History
-    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 }
 catch {
     Write-Error "Error Configuring PS 7 Profile" -errorAction Stop

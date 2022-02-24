@@ -7,21 +7,7 @@ catch {
     Throw "Error loading sandboxconfig.psd1. Ensure it exists in the same directory as this script."
 }
 
-$modules = @(
-    'Microsoft.Graph',
-    'Az',
-    'MSCloudLoginAssistant',
-    'Microsoft.PowerApps.Administration.PowerShell',
-    'ReverseDSC',
-    'PnP.PowerShell',
-    'DSCParser',
-    'MicrosoftTeams',
-    'AzureAd',
-    'ExchangeOnlineManagement',
-    'ImportExcel'
-)
-
-foreach ($module in $modules) {
-    Write-Information "Caching $module"
-    save-module -Name $module -Path "$($config.sandboxSource)\ModuleSource" -Force
+foreach ($module in $config.psmodules) {
+    Write-Information "Caching $($module.name)"
+    save-module -Name $module.name -Path "$($config.sandboxSource)\ModuleSource" -Force
 }
